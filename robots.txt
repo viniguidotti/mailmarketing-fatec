@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: http://westti.com.br/sitemap.xml

@@ -1,0 +1,36 @@
+<?php
+require 'config.php';
+?>
+<!doctype html>
+<html>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <title>Descadastro | Sistema de Descadastro</title>
+
+    <link rel="stylesheet" type="text/css" href="/delete.css">
+</head>  
+    <body>
+	<div id="btninicio">
+        <!-- BOTAO PARA VOLTAR AO INICIO-->
+
+        	<a href='/' class="btn btn-primary btn-lg" role="button" aria-pressed="true">Voltar ao Inicio</a>
+
+    	</div>
+        	<div class="login-box">
+        	<img src="avatar.png" class="avatar">
+        	<h1>Remova seu e-mail do FNS.</h1>
+        	<form action="delete.php" method="post">
+            	<p for="email">Email</p>
+            	<input type="text" name="email" placeholder="Digite o e-mail">
+            	<p for="password">Senha</p>
+            	<input class="rounded" type="password" name="senha" placeholder="Entre a senha">
+            	<input type="submit" name="submit" value="Deletar">
+
+        	</form>
+    	</div>
+    </body>
+</html>

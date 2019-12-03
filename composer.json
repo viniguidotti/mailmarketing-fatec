@@ -1,0 +1,28 @@
+{
+  "name": "fatecnewsender/fns001",
+  "description": "Projeto para automação de E-mails da Faculdade de Tecnologia de Barueri - FATEC BARUERI",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "CLAÚDIO CARNEVALLE\nGABRIEL OLIVEIRA\nITALO AUGUSTO BELISÁRIO GERALDINI\nSÍLVIO HARUO KOMI\nVINÍCIUS GUIDOTTI\nWESLEY FRANÇA\n",
+      "email": "wesley.fv.profissional@hotmail.com",
+      "homepage": "westti.com.br"
+    }
+  ],
+      "config":{
+        "vendor-dir": "vendor"
+      },
+      "autoload": {
+        "psr-4": {
+          "Source\\": "source/"
+        },
+        "files": [
+          "source/Config.php"
+        ]
+
+      },
+        "require": {
+          "phpmailer/phpmailer": "6.1.*"
+        }
+}
