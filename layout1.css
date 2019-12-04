@@ -109,30 +109,33 @@ input[type="password"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #1c8adb;
+    background: #007bff;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
+    width: auto;
 }
 
 .login-box input[type="reset"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #1c8adb;
+    background: #007bff;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
+    width: auto;
 }
 
 .login-box input[type="button"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #1c8adb;
+    background: #007bff;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
+    width: auto;
 }
 
 .login-box input[type="submit"]:hover {

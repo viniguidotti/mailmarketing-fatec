@@ -3,10 +3,10 @@ include 'functions.php';
 require 'config.php';
 session_start();
 
-	if(!isLoggedIn()){
-    		echo "<script>alert('Faça Login para acessar o sistema.');location.href=\"login.html\";</script>";
-	}
-	
+if (!isLoggedIn()) {
+    echo "<script>alert('Faça Login para acessar o sistema.');location.href=\"login.html\";</script>";
+}
+
 ?>
 
 <!doctype html>
@@ -14,9 +14,7 @@ session_start();
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=shift_jis">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-					ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-					ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Pagina de Consulta | Sistema de Consulta Cadastrados</title>
 
@@ -31,13 +29,13 @@ session_start();
 
 
     <?php
-                $PDO = db_connect();
-		$sql = "SELECT * FROM pessoas_cadastradas WHERE status_id = 1";
-		$stmt = $PDO->prepare($sql);
-		$stmt->execute();
+    $PDO = db_connect();
+    $sql = "SELECT * FROM pessoas_cadastradas WHERE status_id = 1";
+    $stmt = $PDO->prepare($sql);
+    $stmt->execute();
 
-		$result = $stmt->fetchAll();
-        	?>
+    $result = $stmt->fetchAll();
+    ?>
 
     <br>
     <form method="post" action="layout1.php">
@@ -54,15 +52,15 @@ session_start();
                     <tbody>
                         <?php
 
-foreach ($result as $value){ 
-    //	echo '<input type=checkbox>'.' Email: '.$value['email'].'<br>';
-    //}
-                ?>
-                        <tr>
-                            <td><?= "<input type=checkbox name='email[]' value=".$value['email'].">" ?></td>
-                            <td><?= $value['id_pessoa_cadastrada']?></td>
-                            <td><?= $value['email']?></td>
-                        </tr>
+                        foreach ($result as $value) {
+                            //	echo '<input type=checkbox>'.' Email: '.$value['email'].'<br>';
+                            //}
+                            ?>
+                            <tr>
+                                <td><?= "<input type=checkbox name='email[]' value=" . $value['email'] . ">" ?></td>
+                                <td><?= $value['id_pessoa_cadastrada'] ?></td>
+                                <td><?= $value['email'] ?></td>
+                            </tr>
                         <?php } ?>
                     </tbody>
                 </table>
@@ -72,14 +70,14 @@ foreach ($result as $value){
                 <button id="btnevent" type="submit" class="btn btn-primary">Criar Evento</button>
                 <button id="btnselect" type="button" class="btn btn-primary" onclick="selecionar()">Selecionar
                     todos</button>
-                <a id="btnback" href="index1.php" class="btn btn-primary">Voltar</a>
+                <a id="btnback" type="button" href="index1.php" class="btn btn-primary">Voltar</a>
             </div>
     </form>
     </div>
     <script>
-    function selecionar() {
-        document.getElementsByName('email[]').forEach((e) => e.checked = true);
-    }
+        function selecionar() {
+            document.getElementsByName('email[]').forEach((e) => e.checked = true);
+        }
     </script>
 </body>
 

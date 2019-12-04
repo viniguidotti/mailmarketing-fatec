@@ -137,3 +137,36 @@ th {
     text-align: center;
     margin: auto;
 }
+
+#btnevent {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto;
+}
+
+#btnselect {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto;
+}
+
+#btnback {
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto;
+}

@@ -68,10 +68,10 @@ input[type="password"] {
     border: none;
     outline: none;
     height: 40px;
-    background: #1c8adb;
+    background: #007bff;
     color: #fff;
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .login-box input[type="submit"]:hover {
