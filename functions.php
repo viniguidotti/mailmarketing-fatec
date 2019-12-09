@@ -10,8 +10,6 @@ function db_connect()
     return $PDO;
 }
 
- 
- 
 /**
  * Cria o hash da senha, usando MD5 e SHA-1
  */
