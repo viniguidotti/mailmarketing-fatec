@@ -13,9 +13,6 @@ if (empty($login) || empty($senha))
     exit;
 }
  
-// cria o hash da senha
-//$senhaHash = make_hash($senha);
- 
 $PDO = db_connect();
  
 $sql = "SELECT id_usuario FROM usuarios WHERE login = :login AND senha = :senha";
